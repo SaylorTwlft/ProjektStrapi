@@ -369,6 +369,7 @@ export interface ApiProductCollectionProductCollection
     singularName: 'product-collection';
     pluralName: 'product-collections';
     displayName: 'ProductCollection';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -383,7 +384,7 @@ export interface ApiProductCollectionProductCollection
         },
         number
       >;
-    product_description: Attribute.Blocks;
+    product_description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

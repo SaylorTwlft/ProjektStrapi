@@ -35,3 +35,31 @@ a {
   padding-bottom: 10px;
   border-bottom: 2px solid;
 }
+
+.product-card {
+  background: #405570;
+  margin: 60px auto;
+  padding: 1px 20px 20px 90px;
+  position: relative;
+}
+
+.product-card .ammount {
+  position: absolute;
+  top: -20px;
+  left: 600px;
+  background: #60d62a;
+  font-size: 2em;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.product-card h2 {
+  margin-bottom: 0;
+}
+
+.product-card small {
+  margin-right: 10px;
+  color: aliceblue;
+}
