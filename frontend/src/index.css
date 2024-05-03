@@ -64,32 +64,14 @@ a {
   text-align: center;
 }
 
-.product-card .ammount-container .add {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  background: #418f1e;
+.product-card .ammount-container input {
+  position: relative;
   font-size: 1em;
-  height: 50px;
-  text-align: center;
+  height: 30px;
+  width: 70px;
   color: aliceblue;
-}
-
-.product-card .ammount-container .sub {
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  background: #418f1e;
-  font-size: 1em;
-  height: 50px;
   text-align: center;
-  color: aliceblue;
-}
-
-.product-card .ammount-container .sub:hover,
-.add:hover {
-  background: #326c17;
-  cursor: pointer;
+  right: -10px;
 }
 
 .product-card h2 {

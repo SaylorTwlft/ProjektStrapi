@@ -15,13 +15,15 @@ export default function ProductDetails() {
     return (
         <div className='product-card'>
             <h2>{data.attributes.product_name}</h2>
-            <div className='ammount'>In stock: {data.attributes.product_ammount}</div>
+            <div className='ammount-container'>
+                <p>In stock: {data.attributes.product_ammount}</p>
+            </div>
 
             <h3>Description:</h3>
             <p>{data.attributes.product_description}</p>
 
             <div className='buttons'>
-                <a className='add-button' href='/'>Back</a>
+                <Link className='add-button' to="/">Cancel</Link>
             </div>
         </div>
     )

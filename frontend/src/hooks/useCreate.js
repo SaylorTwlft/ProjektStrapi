@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useCreate = (uri) => {
+export const useCreate = (uri) => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -16,8 +16,6 @@ const useCreate = (uri) => {
                 body: JSON.stringify(data)
             });
 
-            // Handle response if needed
-
             setLoading(false);
         } catch (error) {
             setError(error);
@@ -28,8 +26,23 @@ const useCreate = (uri) => {
     return { loading, error, createData };
 }
 
-const CreateButton = ({ id, onCreate }) => {
+export const CreateButton = ({ data, onCreate }) => {
     const { loading, error, createData } = useCreate('http://localhost:1337/api/product-collections');
+
+    const handleCreate = async () => {
+        try {
+            await createData(data);
+            onCreate();
+        } catch (error) {
+            console.error("Error creating data:", error);
+        }
+    };
+
+    return (
+        <button className="add-button" onClick={handleCreate} disabled={loading}>
+            {loading ? "Saving..." : "Save"}
+        </button>
+    );
 }
 
 export default CreateButton;

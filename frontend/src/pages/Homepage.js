@@ -3,6 +3,8 @@ import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom';
 import DeleteButton from '../hooks/useDelete'
 
+export const count = 0;
+
 export default function Homepage() {
 
     const { loading, error, data } = useFetch('http://localhost:1337/api/product-collections');
@@ -10,7 +12,6 @@ export default function Homepage() {
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
-
 
 
     console.log(data);
