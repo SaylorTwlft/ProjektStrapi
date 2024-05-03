@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_collections",
+  "info": {
+    "singularName": "product-collection",
+    "pluralName": "product-collections",
+    "displayName": "ProductCollection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "product_ammount": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "product_description": {
+      "type": "blocks"
+    }
+  }
+}
