@@ -5,7 +5,7 @@ import {
 
 import Homepage from './pages/Homepage'
 import ProductDetails from './pages/ProductDetails'
-import Category from './pages/Category'
+import ProductEditor from './pages/ProductEditor'
 import SiteHeader from './components/SiteHeader'
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
         <SiteHeader />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/details/:id" element={<ProductDetails />} />
-          <Route exact path="/category/:id" element={<Category />} />
+          <Route path="/details/:id" element={<ProductDetails />} />
+          <Route path="/edit/:id" element={<ProductEditor />} />
         </Routes>
       </div>
     </Router>

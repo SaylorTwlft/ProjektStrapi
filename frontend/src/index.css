@@ -43,7 +43,7 @@ a {
   position: relative;
 }
 
-.product-card .ammount {
+.product-card .ammount-container {
   position: absolute;
   top: -20px;
   left: 600px;
@@ -51,8 +51,45 @@ a {
   font-size: 2em;
   width: 300px;
   height: 60px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.product-card .ammount-container p {
+  position: relative;
+  top: -35px;
+  font-size: 1em;
+  height: 60px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.product-card .ammount-container .add {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: #418f1e;
+  font-size: 1em;
+  height: 50px;
   text-align: center;
   color: aliceblue;
+}
+
+.product-card .ammount-container .sub {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  background: #418f1e;
+  font-size: 1em;
+  height: 50px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.product-card .ammount-container .sub:hover,
+.add:hover {
+  background: #326c17;
+  cursor: pointer;
 }
 
 .product-card h2 {
@@ -62,4 +99,36 @@ a {
 .product-card small {
   margin-right: 10px;
   color: aliceblue;
+}
+
+.add-button {
+  background: #60d62a;
+  font-size: 1em;
+  text-align: center;
+  color: aliceblue;
+  border: black 1px solid;
+  cursor: pointer;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add-button:hover {
+  background: #49a420;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background: #4a8c2c;
+  font-size: 1em;
+  color: aliceblue;
+  border: black 1px solid;
+  max-width: 800px;
+  max-height: 500px;
+}
+
+
+.buttons {
+  float: right;
 }

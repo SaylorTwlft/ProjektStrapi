@@ -13,7 +13,7 @@ const useFetch = (uri) => {
                 const res = await fetch(uri);
                 const json = await res.json();
 
-                setData(json);
+                setData(json.data);
                 setLoading(false);
             } catch (error) {
                 setError(error);
